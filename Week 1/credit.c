@@ -5,18 +5,18 @@
 int other_digit(long card);
 int duplicaPica(int last_digit);
 int contador(long card);
-bool isAMEX (long card, int contador);
-bool isMASTER (long card, int contador);
-bool isVISA (long card, int contador);
+bool isAMEX(long card, int contador);
+bool isMASTER(long card, int contador);
+bool isVISA(long card, int contador);
 
 int main(void)
 {
-    //variaveis
+    // variaveis
     long card = get_long("Number: ");
     int luth = other_digit(card);
     int c = contador(card);
 
-    //validações
+    // validações
     if (luth % 10 != 0)
     {
         printf("INVALID\n");
@@ -28,11 +28,11 @@ int main(void)
     }
     else if (isMASTER(card, c))
     {
-         printf("MASTERCARD\n");
+        printf("MASTERCARD\n");
     }
-     else if (isVISA(card, c))
+    else if (isVISA(card, c))
     {
-         printf("VISA\n");
+        printf("VISA\n");
     }
     else
     {
@@ -94,52 +94,53 @@ int contador(long card)
     return soma;
 }
 
-bool isAMEX (long card, int contador)
-{   bool resp = false;
+bool isAMEX(long card, int contador)
+{
+    bool resp = false;
     int dois = card / pow(10, 13); // isso pega os primeiros 2 digitos de um numero com 15 digitos
 
-    if((dois==34 || dois==37) && contador == 15)
+    if ((dois == 34 || dois == 37) && contador == 15)
     {
-        resp=true;
+        resp = true;
     }
 
     return resp;
 }
 
-bool isMASTER (long card, int contador)
-{   bool resp = false;
+bool isMASTER(long card, int contador)
+{
+    bool resp = false;
     int dois = card / pow(10, 14); // isso pega os primeiros 2 digitos de um numero com 15 digitos
 
-    if((dois>50 && dois<56) && contador == 16)
+    if ((dois > 50 && dois < 56) && contador == 16)
     {
-        resp=true;
+        resp = true;
     }
 
     return resp;
 }
 
-bool isVISA (long card, int contador)
-{   bool resp = false;
-    if(contador == 13)
+bool isVISA(long card, int contador)
+{
+    bool resp = false;
+    if (contador == 13)
     {
         int um = card / pow(10, 12); // isso pega os primeiros 2 digitos de um numero com 15 digitos
 
-        if(um==4)
+        if (um == 4)
         {
             resp = true;
         }
     }
-    else if(contador == 16)
+    else if (contador == 16)
     {
         int um = card / pow(10, 15); // isso pega os primeiros 2 digitos de um numero com 15 digitos
 
-        if(um==4)
+        if (um == 4)
         {
             resp = true;
         }
     }
 
-
     return resp;
 }
-
