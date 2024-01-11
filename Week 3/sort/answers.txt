@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: He is the quickeist in a unsorted list.
+
+sort2 uses: Merge Sort
+
+How do you know?: He is the quickeist in a sorted list.
+
+sort3 uses: Selection Sort
+
+How do you know?: he is consistent in both sorted and unsorted lists.
