@@ -9,11 +9,13 @@ typedef struct
 
 } candidate;
 
-#define MAX 9
 
+//predefinidos para mexer
+#define MAX 9
 candidate candidates[MAX];
 int candidate_count;
 
+//funçoes
 bool vote(string name);
 void print_winner(void);
 
@@ -43,7 +45,6 @@ int main(int argc, string argv[])
 
     // COMPUTANDO O VOTO
     int eleitores = get_int("Number of voters: ");
-
     for (int i = 0; i < eleitores; i++)
     {
         string name = get_string("Vote: ");
@@ -59,6 +60,8 @@ int main(int argc, string argv[])
     return 0;
 }
 
+
+//computa os votos
 bool vote(string name)
 {
     bool resp = false;
@@ -74,7 +77,7 @@ bool vote(string name)
     return resp;
 }
 
-
+//printa o vencedor
 void print_winner()
 {
     int maximum_vote =0;
