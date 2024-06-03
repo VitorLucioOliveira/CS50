@@ -1,0 +1,382 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: #eb8585;
+}
+
+#container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+#container > header {
+    background: #eb8585;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+main {
+    background: #eb8585;
+    font-size: 20px;
+    padding: 1rem;
+}
+
+footer {
+    display:auto;
+    background: #bb1313;
+    height: 100px;
+    border-radius: 10px;
+
+}
+
+.sociais{
+    display: inline-block;
+    list-style-position:inside;
+    margin: 10px;
+    padding: 10px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+
+
+}
+.pagamentos{
+    display: inline-block;
+    list-style-position:inside;
+    margin: auto;
+    padding: 10px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+
+
+}
+
+.newsletter{
+    margin-left: 20px;
+    font-size: medium;
+    text-align: justify;
+    margin-right: 10%;
+    display: inline-block;
+
+}
+
+
+/* NAV */
+nav {
+    background: #bb1313;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    color: #000000;
+    border-right: 1px solid #000000;
+    display: inline-block;
+
+}
+
+nav ul li form {
+    width: fit-content;
+    display: inline-block;
+
+
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    color: #000000;
+    padding: 15px;
+}
+
+/* MAIN */
+main > header {
+    color: #d84c72;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    font-weight: 800;
+}
+
+
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(3 1fr );
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+
+}
+
+.produto {
+
+    background-color: #eba8a8;
+    image-orientation: center;
+    border-radius: 5px
+}
+
+.banner {
+    grid-column: 1 / span 4;
+    justify-self: center;
+    margin-top: 20px;
+    border: 5px solid #bb1313;
+    border-radius: 5px;
+}
+
+.produto p {
+    background: #bb1313;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 10px;
+   height: 60px;
+   border-radius: 5px
+}
+
+.carrossel {
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+  }
+
+  .imagens {
+    display: flex;
+    scroll-snap-align: start;
+    width: 300%;
+  }
+
+  .imagens img {
+    width: calc(100% / 3);
+    height: auto;
+    scroll-snap-align: center;
+  }
+
+  /* BARRA DE PESQUISA*/
+  form {
+    display: flex;
+    align-items: center;
+  }
+
+  label {
+    margin-right: 10px;
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px
+  }
+
+  button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #000000;
+    color: whitesmoke;
+    border: none;
+    border-radius: 90px;
+  }
+
+  /* Most review*/
+  #most-reviewed {
+    margin-top: 50px;
+  }
+  .titulo{
+
+    background-color: #bb1313;
+    text-align: center;
+    border-radius: 5px;
+    color: whitesmoke;
+    }
+
+.lista{
+    text-align: center;
+    margin: 15px;
+    width: fit-content;
+}
+
+
+
+.vermelo{
+
+    color: whitesmoke;
+    background-color: #bb1313;
+    width: 100%;
+}
+#menuToggler{
+    display: none;
+
+}
+.menu-icon{
+    display: none;
+}
+header nav{
+    display: none;
+}
+
+
+
+  /* PRO CELULAR */
+
+
+   @media screen and (max-width:600px)
+  {
+    header nav{
+        display: block;
+        background-color: #bb1313;
+    }
+
+      .grid{
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        .banner{
+            grid-column: auto;
+            grid-row: auto;
+
+        }
+    .logo{
+        display: none;
+
+    }
+
+    .produto div{
+        display: none;
+    }
+
+
+    #menuToggler{
+        display: none;
+
+    }
+    .menu-icon{
+        display: none;
+    }
+
+
+    @media screen and (max-width:600px){
+
+        .newsletter{
+            display: none;
+        }
+
+        .header{
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+
+        .header nav{
+            display: absolute;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .menu{
+            display: flex;
+            position: fixed;
+            flex-wrap: wrap;
+            align-content: center;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 0%;
+            width: 100%;
+            overflow: hidden;
+            background: rgb(158, 17, 17);
+            transition:  0.3s;
+
+        }
+        .menu li{
+            display: block;
+            width: 100%;
+            margin: 0px;
+            margin-left: 0px;
+            margin-bottom: 20px;
+            background: none;
+
+        }
+
+        .menu li a{
+            display: block;
+            text-align: center;
+            width: 100%;
+
+
+        }
+
+        .menu-icon{
+            display: block;
+            color: rgb(0, 0, 0);
+            width: 50px;
+            height: inherit;
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            line-height: 60px;
+            z-index: 999;
+            background-color: #bb1313;
+
+        }
+
+        .menu-icon i{
+            font-size: 1.7em;
+        }
+
+
+        /* quando um ta o outro n ta*/
+        #menuToggler:checked ~ label i:nth-child(2){
+            display: block;
+        }
+
+        #menuToggler:checked ~ label i:first-child{
+            display: none;
+        }
+
+        #menuToggler:not(checked) ~ label i:nth-child(2){
+            display: none;
+        }
+
+        #menuToggler:not(checked) ~ label i:first-child{
+            display: block;
+        }
+
+        #menuToggler:checked ~ ul{
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

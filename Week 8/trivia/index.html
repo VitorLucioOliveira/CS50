@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                //Pro certo
+                let certo = document.querySelector('.certo');
+                certo.addEventListener('click', function()
+                {   certo.style.backgroundColor = "green";
+                    document.querySelector('#r1').innerHTML = "Correct!!";
+                });
+
+                //Pro errado
+                let errado = document.querySelectorAll('.errado');
+
+                for(let i = 0; i< errado.length; i++){
+                   errado[i].addEventListener('click', function(){
+                    errado[i].style.backgroundColor = "red";
+                     document.querySelector('#r1').innerHTML = "Wrong!!"; });
+                }
+
+                //Pra 2
+                document.querySelector('#check').addEventListener('click', function(){
+                let input = document.querySelector('input');
+                if (input.value.toLowerCase() == "brazil"){
+                    input.style.backgroundColor = "green";
+                    document.querySelector('#r2').innerHTML = "Correct!!";}
+                else
+                {
+                    input.style.backgroundColor = "red";
+                    document.querySelector('#r2').innerHTML = "Wrong!!";
+
+                }
+                });
+
+
+
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>How long was the duration of The Hundred Years' War?</h3>
+
+                    <button class= "errado" type = "text" >100 years</button>
+                    <button class= "errado" type = "text" >150 years</button>
+                    <button class= "certo"  type = "text" >116 years</button>
+
+                    <p id="r1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Wich country is the best in the world?</h3>
+                <form autocomplete="off">
+                    <input id="input" type="text" placeholder="Country">
+                    <button id="check" type="submit">Check Answer</button>
+                    <p id="r2"></p>
+                  </form>
+            </div>
+        </div>
+    </body>
+</html>

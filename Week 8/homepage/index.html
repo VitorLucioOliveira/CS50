@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6bd401535f.js" crossorigin="anonymous"></script>
+        <title>My Webpage</title>
+    </head>
+    <body>
+
+        <div id="container">
+          <header>
+            <header class="header">
+
+
+              <nav>
+                   <input type="checkbox"
+                   id="menuToggler">
+                   <label for="menuToggler"
+                   class="menu-icon">
+                   <i class="fa fa-bars"></i>
+                   <i class="fa fa-times-circle"></i>
+                   </label>
+
+                   <ul class="menu">
+                        <li><a href="#">Sabores</a></li>
+                        <li><a href="#">Franquias</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Localização</a></li>
+                        <li><form>
+                          <label for="search"> </label>
+                          <input type="text" id="search" name="search">
+                          <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+                        </form>
+                        </li>
+                   </ul>
+
+
+
+
+
+              </nav>
+
+         </header>
+            <picture class="logo">
+              <img src="img/logo.webp" width="200px">
+            </picture>
+          </header>
+          <nav>
+            <ul class="menu">
+              <li><a href="home.html">Sabores</a></li>
+              <li><a href="#">Franquias</a></li>
+              <li><a href="#">Sobre nós</a></li>
+              <li><a href="#">Localização</a></li>
+              <li><form>
+                <label for="search"> </label>
+                <input type="text" id="search" name="search">
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+              </form>
+              </li>
+            </ul>
+          </nav>
+          <main>
+
+         
+
+
+            <section id="produtos">
+              <div class="banner">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/banner 2.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/banner 1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/banner3.webp" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+             </div>
+
+
+              <section class="produto">
+                <img src="img/8.webp" width="200px" >
+                <p>Napolitano Especial R$19.99</p>
+              </section>
+
+              <section class="produto">
+                <img src="img/7.webp" width="200px"  >
+                <p>Chocolate Cremoso R$19.99</p>
+              </section>
+
+
+              <section class="produto">
+                <img src="img/3.webp" width="200px">
+                <p>Sundae de Chocolate R$19.99</p>
+              </section>
+
+              <section class="produto">
+              <div>
+                <h2 class="titulo">Mais Vistos</h2>
+                <table class="lista">
+                  <tr class="vermelo">
+                    <td>Napolitano Especial</td>
+                    <td>145</td>
+                  </tr>
+                  <tr>
+                  <td>Chocolate Cremoso</td>
+                    <td>120</td>
+                  </tr>
+                  <tr class="vermelo">
+                    <td>Sundae de Chocolate</td>
+                    <td>100</td>
+                  </tr>
+                  <tr>
+
+                    <td>Morango com Leite</td>
+                    <td>85</td>
+                  </tr>
+                  <tr class="vermelo">
+                   <td >Chica Bon Zero 70</td>
+                      <td>70</td>
+                  </tr>
+                </table>
+              </div>
+              </section>
+
+              <section class="produto">
+                <img src="img/14.webp" width="200px">
+                <p>Morango com Leite R$19.99</p>
+              </section>
+
+
+              <section class="produto">
+                <img src="img/11.png" width="200px ">
+                <p>Chica Bon Zero  R$15.99</p>
+              </section>
+
+              <section class="produto">
+                <img src="img/12.webp" width="200px">
+                <p>Snickers  R$15.99</p>
+              </section>
+
+
+              <section class="produto">
+                <img src="img/13.webp" width="200px">
+                <p>Chocolate Vegano de Avelã   R$15.99</p>
+              </section>
+
+
+
+
+
+            </section>
+          </main>
+
+          <footer>
+          <section class="newsletter">
+            <h2>Newsletter</h2>
+            <p>Inscreva-se com o Email e receba novidades e promoções</p>
+            <form action="#" method="post">
+              <input type="email" id="email" name="email" required>
+              <button type="submit"><i class="fa-regular fa-envelope-open"></i></button>
+            </form>
+          </section>
+
+            <ul class="sociais">
+              <li><i class="fa-brands fa-instagram"></i> @kibomofc</li>
+              <li><i class="fa-brands fa-facebook"></i></i> kibomofc</li>
+             <li><i class="fa-solid fa-phone"></i></i> (31) 9888-8888</li>
+            </ul>
+
+
+          <ul class="pagamentos">
+            <li> <i class="fa-solid fa-credit-card"></i></li>
+            <li> <i class="fa-regular fa-credit-card"></i></li>
+          </ul>
+
+
+
+
+          </footer>
+       </div>
+      </body>
+
+      </html>

@@ -1,0 +1,10 @@
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+- By the  danceability, energy and valence.
+
+Avarege energy  = 0.65906
+Avarege valence = 0.48443
+Avarege danceability = 0.71646
+
+- By these date, the user listened sad and happy music. So I conclude that the user have the Blue aura
+
+

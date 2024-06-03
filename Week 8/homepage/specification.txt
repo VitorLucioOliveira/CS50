@@ -1,0 +1,11 @@
+ CSS:
+
+ .menu -> USED TO BUILD A MENU ROW
+ .newsletter -> USED TO BUILD A NEWSLETTER IN THE END OF THE PAGE
+ #produtos -> USED TO MAKE ALL THE ITENS IN THE SAME FORMAT
+ .carrossel ->USED TO BUILD MOVING IMAGES
+ #most-reviewed  - USED TO MAKE A CARD IN THE LEFT FOR ITEN'S NAME
+
+ HTML
+ . I did a page for a ice cream shop that is famous in Brazil, using bootstrap por a carousel and fontawesome for icons.
+ 
