@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Groceries</title>
+</head>
+<body>
+    
+    <div id="logo">
+        <img src="{{ url_for('static', filename='logo_black.png') }}" alt="Logo">
+    </div>
+
+    <!-- Remover Item da Lista de Compras -->
+    <div id="remove_item">
+        <form action="/remove_itens" method="POST">
+            {% if lista_compras %}
+                {% for item, quantidade in lista_compras %}
+                    <div class="check_box">
+                        <input type="checkbox" name="check" id="{{ item }}" value="{{ item }}">
+                        <label for="{{ item }}" name="{{ item }}">{{ item }} x {{ quantidade }}</label><br>
+                    </div>
+                {% endfor %}
+                <input type="submit" value="Check Items" id="btn_remove">
+            {% else %}
+                <p>Empty</p>
+                <img src="{{ url_for('static', filename='cesta.png') }}" alt="Logo">
+            {% endif %}
+        </form>
+    </div>
+
+    <!-- Adicionar Item da Lista de Compras -->
+    <div id="add_item">
+        <form action="/add_itens" method="POST">
+            <select name="seleciona_itens">
+                {% for item in all_items %}
+                    <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+            </select>
+            <select name="quantidade">
+                {% for i in range(1, 11) %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Add Item" id="btn_add">
+        </form>
+    </div>
+</body>
+</html>
