@@ -1,5 +1,5 @@
 # Groceries
-### Video Demo:  <URL HERE>
+### Video Demo:  <[URL HERE](https://youtu.be/6PzdmD-ydwQ)>
 
 ## Description: 
 - Groceries is a web-based application utilizing JavaScript, Python, and SQL that allows users to manage their grocery list. You can easily add and remove items and there quantity, updating your list at your convenience. Each list starts with 5 random items to get you started and you can't duplicate items.
