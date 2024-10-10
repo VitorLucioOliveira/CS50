@@ -1,3 +1,3 @@
 # CS50
 
-- Trabalhos para Introduction to Computer Science | Harvard University
+- Trabalhos para CS50: Introduction to Computer Science | Harvard University (2024)
